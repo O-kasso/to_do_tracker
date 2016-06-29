@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf8">
+  <title><%= @title + ' | TODO Tracker' %></title>
+  <link href="/reset.css" rel="stylesheet">
+  <link href="/style.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <hgroup>
+      <h1><a href="/">TODO Tracker</a></h1>
+      <h2>Pen and paper is for chumps.</h2>
+      <h4>Store all your important tasks here so your squishy brain doesn't have to.</h4>
+      </hgroup>
+  </header>
+ 
+  <div id="main">
+    <%= yield %>
+  </div>
+ 
+  <footer>
+    <p><small>An app for <a href="https://en.wikipedia.org/wiki/Special:Random">fucking cool people</a>.</small></p>
+  </footer>
+</body>
+</html>
