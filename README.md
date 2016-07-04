@@ -1,4 +1,4 @@
-## Mini List App
+## TODO Tracker
 
 This repo is just a test to play around with Sinatra and practice stuffs. It was
 thrown together in a few minutes and then prompty forgotten about.
