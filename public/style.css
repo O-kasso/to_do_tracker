@@ -35,7 +35,7 @@ header h2 {
 }
  
 #add textarea {
-    height: 30px;
+    height: 50px;
     width: 510px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -43,9 +43,9 @@ header h2 {
 }
  
 #add input {
-    height: 50px;
+    height: 72px;
     width: 100px;
-    margin: -50px 0 0;
+    float: right;
     border: 1px solid #EEE8D5;
     background: #268BD2;
 }
@@ -55,14 +55,15 @@ header h2 {
     width: 480px;
     padding: 10px;
     border: 1px solid #ddd;
+    background-color: #EEE8D5;
 }
  
 #edit input[type=submit] {
     height: 50px;
     width: 100px;
     margin: -50px 0 0;
-    border: 1px solid #ddd;
-    background: white;
+    border: 1px solid #ddd; 
+    background: #268BD2;
 }
  
 #edit input[type=checkbox] {
@@ -70,12 +71,18 @@ header h2 {
     width: 20px;
 }
  
+.list {
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;
+}
+
 article {
     border: 1px solid #eee;
     border-top: none;
     padding: 15px 10px;
-    background: #93A1A1;
-    color: #073642
+    background: #CCC6B3;
+    color: #268BD2;
 }
  
 article:first-of-type {
@@ -87,7 +94,8 @@ article:nth-child(even) {
 }
  
 article.complete {
-    background: #CB4B16;
+    background: #859900;
+    color: #EEE8D5;
 }
  
 article span {
@@ -104,6 +112,10 @@ p {
     font-style: italic;
     color: #268BD2
 }
+
+.complete .meta {
+    color: #EEE8D5;
+}
  
 .links {
     font-size: 2.8em;
@@ -115,7 +127,7 @@ p {
 .links a {
     display: block;
     text-decoration: none;
-    color: #DC322F;
+    color: #859900;
 }
 
 .complete .links a {
@@ -137,8 +149,8 @@ blockquote {
   text-align: justify;
   
   /*Borders - (Optional)*/
-  border-left: 15px solid #c76c0c;
-  border-right: 2px solid #c76c0c;
+  border-left: 15px solid #268BD2;
+  border-right: 2px solid #268BD2;
   
   /*Box Shadow - (Optional)*/
   -moz-box-shadow: 2px 2px 15px #ccc;
