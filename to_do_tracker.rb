@@ -15,6 +15,11 @@ end
 
 DataMapper.finalize.auto_upgrade!
 
+helpers do
+  # so we can use escape_html method
+  include Rack::Utils
+end
+
 get '/' do
   @notes = Note.all :order => :id.desc
   @title = 'All Notes'
