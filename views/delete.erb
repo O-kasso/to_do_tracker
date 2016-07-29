@@ -3,12 +3,12 @@
   <br />
   <blockquote><%= @note.content %></blockquote>
   <br />
-  <p>Are you sure you would like to proceed?</p>
+  <p>Are you sure you would like to delete this note?</p>
   <br />
   <form action="/<%= @note.id %>" method="post">
     <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Yes, Delete it!">
-    <a href="/<%= @note.id %>">Cancel</a>
+    <input type="submit" value="Kill it with fire!">
+    <a href="/<%= @note.id %>">Actually, let's keep it</a>
   </form>
 <% else %>
   <p>Note not found.</p>
