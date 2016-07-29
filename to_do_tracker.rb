@@ -1,12 +1,10 @@
 require 'sinatra'
 require 'data_mapper'
 require 'tilt/erb'
-require 'rack-flash'
+require 'sinatra/flash'
 require 'sinatra/redirect_with_flash'
 
 enable :sessions
-use Rack::Flash, sweep: true
-
 
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/to_do_tracker.db")
 
