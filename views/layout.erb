@@ -15,13 +15,15 @@
     </hgroup>
   </header>
  
-  <% if flash[:notice] %>
-    <p class="notice"><%= flash[:notice] %>
-  <% end %>
+  <div id="flash" class="notice">
+    <a class="close" data-dismiss="alert">&#215;</a>
+    <%= flash[:notice] %>
+  </div>
 
-  <% if flash[:error] %>
-    <p class="error"><%= flash[:error] %>
-  <% end %>
+  <div id="flash" class="error">
+    <a class="close" data-dismiss="alert">&#215;</a>
+    <%= flash[:error] %>
+  </div>
 
   <div id="main">
     <%= yield %>

@@ -22,11 +22,8 @@ DataMapper.finalize.auto_upgrade!
 get '/' do
   @notes = Note.all :order => :id.desc
   @title = 'All Notes'
-  if @notes.any?
-    erb :home
-  else
-    flash[:error] = 'No notes found. Add your first below.'
-  end
+  flash[:error] = 'No notes found. Add your first below.' if @notes.empty?
+  erb :home
 end
 
 post '/' do

@@ -134,6 +134,9 @@ p {
     color: #268BD2;
 }
 
+.notice { color: green; }
+.error { color: red; }
+
 blockquote {
   display:block;
   background: #fff;
