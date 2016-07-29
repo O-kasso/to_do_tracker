@@ -1,6 +1,12 @@
 require 'sinatra'
 require 'data_mapper'
 require 'tilt/erb'
+require 'rack-flash'
+require 'sinatra/redirect_with_flash'
+
+enable :sessions
+use Rack::Flash, sweep: true
+
 
 DataMapper::setup(:default, "sqlite3://#{Dir.pwd}/to_do_tracker.db")
 
@@ -18,7 +24,11 @@ DataMapper.finalize.auto_upgrade!
 get '/' do
   @notes = Note.all :order => :id.desc
   @title = 'All Notes'
-  erb :home
+  if @notes.any?
+    erb :home
+  else
+    flash[:error] = 'No notes found. Add your first below.'
+  end
 end
 
 post '/' do
