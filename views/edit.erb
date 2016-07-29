@@ -3,7 +3,8 @@
     <input type="hidden" name="_method" value="put">
     <textarea name="content"><%= @note.content %></textarea>
     <input type="checkbox" name="complete" <%= "checked" if @note.complete %>>
-    <input type="submit">
+    <input type="submit" value="Save">
+    <input type="reset" value="Discard changes">
   </form>
   <p><a href="/<%= @note.id %>/delete">Delete</a></p>
 <% else %>
