@@ -14,16 +14,20 @@
       <h4>Store all your important tasks here so your squishy brain doesn't have to.</h4>
     </hgroup>
   </header>
- 
-  <div id="flash" class="notice">
-    <a class="close" data-dismiss="alert">&#215;</a>
-    <%= flash[:notice] %>
-  </div>
 
-  <div id="flash" class="error">
-    <a class="close" data-dismiss="alert">&#215;</a>
-    <%= flash[:error] %>
-  </div>
+  <% if flash[:notice] %>
+    <div id="flash" class="notice">
+      <%= flash[:notice] %>
+      <a class="close" data-dismiss="alert">&#215;</a>
+    </div>
+  <% end %>
+
+  <% if flash[:error] %>
+    <div id="flash" class="error">
+      <%= flash[:error] %>
+      <a class="close" data-dismiss="alert">&#215;</a>
+    </div>
+  <% end %>
 
   <div id="main">
     <%= yield %>
