@@ -72,3 +72,10 @@ get '/:id/complete' do
   n.save
   redirect '/'
 end
+
+not_found do
+  @title = 'Page not found'
+  status 404 
+  erb :page_not_found
+end
+
