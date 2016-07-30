@@ -1,7 +1,7 @@
 <% if @note %>
   <p>The following note is about to be deleted:</p>
   <br />
-  <blockquote><%= @note.content %></blockquote>
+  <blockquote><%=escape_html @note.content %></blockquote>
   <br />
   <p>Are you sure you would like to delete this note?</p>
   <br />
