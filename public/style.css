@@ -17,7 +17,6 @@ header h1 {
  
 header h1 a:link, header h1 a:visited {
     color: #268BD2;
-    text-decoration: none;
 }
  
 header h2 {
@@ -25,7 +24,10 @@ header h2 {
     font-style: italic;
     color: #859900;
 }
- 
+
+a, a:hover, a:visited, a:link, a:active {
+    text-decoration: none;  
+}
 #main {
     margin: 0 0 20px;
 }
@@ -142,13 +144,19 @@ p {
   margin: 12px 0;
 }
 
+.error#flash { 
+  display: block;
+  color: #EEE8D5;
+  background: #DC322F;
+  padding: 4px;
+  margin: 12px 0;
+}
+
 .close {
   float: right;
   color: #EEE8D5;
   padding: 0 8px;
 }
-.error { color: red; }
-
 
 blockquote {
   display:block;
