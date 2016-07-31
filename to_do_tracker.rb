@@ -34,7 +34,7 @@ post '/' do
   if n.save
     redirect '/', notice: 'Note created successfully.'
   else
-    redirect '/', notice: 'Failed to save note.'
+    redirect '/', error: 'Failed to save note.'
   end
 end
 

@@ -18,14 +18,14 @@
   <% if flash[:notice] %>
     <div id="flash" class="notice">
       <%= flash[:notice] %>
-      <a class="close" data-dismiss="alert">&#215;</a>
+      <span class="close"><a class="close" data-dismiss="alert">&#215;</a></span>
     </div>
   <% end %>
 
   <% if flash[:error] %>
     <div id="flash" class="error">
       <%= flash[:error] %>
-      <a class="close" data-dismiss="alert">&#215;</a>
+      <span class="close"><a class="close" data-dismiss="alert">&#215;</a></span>
     </div>
   <% end %>
 
